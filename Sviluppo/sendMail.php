@@ -1,5 +1,13 @@
 <?php
 
+/**
+	EMAIL e password
+	
+	Outlook: reggianiaccessi@outlook.it ; pw: reggiani.2021
+	Sendinblue: reggianiaccessi@outlook.it ; pw: reggiani.2021 (o con prima maiuscola)
+	Altervista: reggianiaccessi@outlook ; pw : ?
+*/
+
 include 'Libraries/Mailin.php';
 
 $mailin = new Mailin('https://api.sendinblue.com/v2.0','gn8p0JaBCTQmcsxS');
