@@ -1,0 +1,1 @@
+La cartella contiene file di schemi e progetti utilizzati per la realizzazione del progetto.
