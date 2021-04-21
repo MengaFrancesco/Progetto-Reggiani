@@ -222,27 +222,27 @@ select option {
 </style>
 
 <div class="container">
-  <form  method="GET" action="inserisciAccesso.php">
+  <form  method="POST" action="inserisciAccesso.php">
     <div class="row">
       <h1>Nuovo Appuntamento</h1>
       <div class="input-group input-group-icon">
-        <input type="text" placeholder="Nome"/>
+        <input type="text" placeholder="Nome" name='nameNome'/>
         <div class="input-icon"><i class="fa fa-user"></i></div>
       </div>
       <div class="input-group input-group-icon">
-        <input type="text" placeholder="Cognome"/>
+        <input type="text" placeholder="Cognome" name='nameCognome'/>
         <div class="input-icon"><i class="fa fa-envelope"></i></div>
       </div>
       <div class="input-group input-group-icon">
-        <input type="text" placeholder="Azienda"/>
+        <input type="text" placeholder="Azienda"  name='nameAzienda'/>
         <div class="input-icon"><i class="fa fa-key"></i></div>
       </div>
 	  <div class="input-group input-group-icon">
-        <input type="text" placeholder="Referente"/>
+        <input type="text" placeholder="Referente"  name='nameReferente'/>
         <div class="input-icon"><i class="fa fa-key"></i></div>
       </div>
 	  <div class="input-group input-group-icon">
-        <input type="text" placeholder="Telefono"/>
+        <input type="text" placeholder="Telefono"  name='nameTelefono'/>
         <div class="input-icon"><i class="fa fa-key"></i></div>
       </div>
 	  <div class="input-group input-group-icon">
@@ -264,7 +264,7 @@ select option {
         <input id="terms" type="checkbox"/>
         <label for="terms"> Autorizzo il trattamento dei dati personali</label>
 		<br>
-		<input id="visModulo"  type="button" value="Visualizza modulo"/>
+		<a href="informativaPrivacy.php"><input id="visModulo" type="button" value="Visualizza modulo"/></a>
 		<br><br>
 		<input id="termina"  type="submit" value="Inserisci Accesso"/>
 		<br>
@@ -274,5 +274,3 @@ select option {
     </div>
   </form>
 </div>
-
-<img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=https://sourceforge.net/projects/phpqrcode/" title="Link to Google.com" />
