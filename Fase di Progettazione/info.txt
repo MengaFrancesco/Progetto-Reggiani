@@ -1,2 +1,0 @@
-INFO
-La cartella contiene i file HTML con una preview basilare delle pagine del sito web, privo di implementazione delle funzioni e dettagli grafici extra
