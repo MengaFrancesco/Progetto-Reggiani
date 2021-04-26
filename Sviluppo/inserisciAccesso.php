@@ -8,6 +8,7 @@
 
 include 'Libraries/Mailin.php';
 include 'chkSession.php';
+include 'connection.php';
 
 $mailin = new Mailin('https://api.sendinblue.com/v2.0', 'gn8p0JaBCTQmcsxS');
 /*
@@ -19,6 +20,7 @@ $mailin = new Mailin('https://api.sendinblue.com/v2.0', 'gn8p0JaBCTQmcsxS');
 $codice = "codice";
 $codice = iconv('UTF-8', 'ISO-8859-1', $codice);
 
+//Recupero delle variabili
 $nome = $_POST["nameNome"];
 $cognome = $_POST["nameCognome"];
 $azienda = $_POST["nameAzienda"];
@@ -26,8 +28,13 @@ $referente = $_POST["nameReferente"];
 $telefono = $_POST["nameTelefono"];
 $mail = $_POST["nameMail"];
 $info = file_get_contents('informativaPrivacy.php');
-$giorno = date("Y-m-d");
-$ora = date("h:i:s");
+$giorno = date("d-m-Y");
+$ora = date("H:i:s");
+
+//Inserimento accesso nel database
+$sql = "INSERT INTO accessi(`ID`, `Nome`, `Cognome`, `Azienda`, `Referente`, `Telefono`, `Mail`)";
+$sql .= " VALUES (NULL,'".$nome."','".$cognome."','".$azienda."','".$referente."',".$telefono.",'".$mail."')";
+$conn->query($sql);
 
 //$data = array( "to" => array("ReggianiAccessi@outlook.it"=>""),
 $data = array(

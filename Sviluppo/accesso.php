@@ -221,27 +221,55 @@ select option {
 
 </style>
 
-
-
 <div class="container">
-  <form>
+  <form  method="POST" action="inserisciAccesso.php">
     <div class="row">
-      <h1>Accesso al portale</h1>
+      <h1>Nuovo Appuntamento</h1>
       <div class="input-group input-group-icon">
-        <input type="text" placeholder="Username"/>
+        <input type="text" placeholder="Nome" name='nameNome'/>
         <div class="input-icon"><i class="fa fa-user"></i></div>
       </div>
       <div class="input-group input-group-icon">
-        <input type="password" placeholder="Password"/>
+        <input type="text" placeholder="Cognome" name='nameCognome'/>
         <div class="input-icon"><i class="fa fa-envelope"></i></div>
-      </div>    
-	</div>
+      </div>
+      <div class="input-group input-group-icon">
+        <input type="text" placeholder="Azienda"  name='nameAzienda'/>
+        <div class="input-icon"><i class="fa fa-key"></i></div>
+      </div>
+	  <div class="input-group input-group-icon">
+        <input type="text" placeholder="Referente"  name='nameReferente'/>
+        <div class="input-icon"><i class="fa fa-key"></i></div>
+      </div>
+	  <div class="input-group input-group-icon">
+        <input type="text" placeholder="Telefono"  name='nameTelefono'/>
+        <div class="input-icon"><i class="fa fa-key"></i></div>
+      </div>
+	  <div class="input-group input-group-icon">
+        <input type="text" placeholder="Mail" name="nameMail"/>
+        <div class="input-icon"><i class="fa fa-key"></i></div>
+      </div>
+	  <div>
+		<p>Orario di arrivo: <span id="datetime"></span></p>
+
+		<script>
+			var dt = new Date();
+			document.getElementById("datetime").innerHTML = dt.toLocaleString();
+		</script>
+	  </div>
+    </div>
     <div class="row">
+      <h4>Termini e Condizioni</h4>
+      <div class="input-group">
+        <input id="terms" type="checkbox"/>
+        <label for="terms"> Autorizzo il trattamento dei dati personali</label>
 		<br>
-		<input id="Accedi"  type="button" value="Accedi"/>
+		<a href="informativaPrivacy.php"><input id="visModulo" type="button" value="Visualizza modulo"/></a>
 		<br><br>
-		<input id="Ripristino"  type="button" value="Username/Password dimenticati?"/>
-		<br><br>
+		<input id="termina"  type="submit" value="Inserisci Accesso"/>
+		<br>
+		<br>
+		<input id="indietro"  type="button" value="Torna indietro"/>
       </div>
     </div>
   </form>
