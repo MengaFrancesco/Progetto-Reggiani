@@ -1,1 +1,0 @@
-La cartella contiene i file php con le pagine del sito web
