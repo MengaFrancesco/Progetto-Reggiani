@@ -1,3 +1,8 @@
+<?php
+	include("chkSession.php");
+	include("connection.php");
+?>
+
 <!doctype html>
 <html lang="en-US" xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:addthis="https://www.addthis.com/help/api-spec"  prefix="og: http://ogp.me/ns#" class="no-js">
 <head>
@@ -21,28 +26,15 @@
 	</script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131906273-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-	  gtag('config', 'UA-131906273-1');
-	</script>
 </head>
 
 <body>
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	
+	
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-sm-3">
-				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-				<!-- demo left sidebar -->
-				<ins class="adsbygoogle"
-					 style="display:block"
-					 data-ad-client="ca-pub-6724419004010752"
-					 data-ad-slot="7706376079"
-					 data-ad-format="auto"
-					 data-full-width-responsive="true"></ins>
-			</div>
+			
 			
 			<div class="col">
 				<script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
@@ -52,8 +44,8 @@
 				<script type="text/javascript">
 					var scanner = new Instascan.Scanner({ video: document.getElementById('preview'), scanPeriod: 5, mirror: false });
 					scanner.addListener('scan',function(content){
-						alert(content);
-						//window.location.href=content;
+						//alert(content);
+						window.open("visualizzaQR.php?QR="+content,"_self");
 					});
 					Instascan.Camera.getCameras().then(function (cameras){
 						if(cameras.length>0){
@@ -92,6 +84,20 @@
 				</div>
 			</div>
 			
+			
+			<div class="col-sm-3">
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<!-- demo left sidebar -->
+				<ins class="adsbygoogle"
+					 style="display:block"
+					 data-ad-client="ca-pub-6724419004010752"
+					 data-ad-slot="7706376079"
+					 data-ad-format="auto"
+					 data-full-width-responsive="true"></ins>
+				<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</div>
 		
 		</div>
 	</div>

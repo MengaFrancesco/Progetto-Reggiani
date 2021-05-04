@@ -224,21 +224,21 @@ select option {
 
 
 <div class="container">
-  <form>
+  <form action="chkLogin.php" method="post">
     <div class="row">
       <h1>Accesso al portale</h1>
       <div class="input-group input-group-icon">
-        <input type="text" placeholder="Username"/>
+        <input type="text" placeholder="Username" name="nameUsername"/>
         <div class="input-icon"><i class="fa fa-user"></i></div>
       </div>
       <div class="input-group input-group-icon">
-        <input type="password" placeholder="Password"/>
+        <input type="password" placeholder="Password" name="namePassword"/>
         <div class="input-icon"><i class="fa fa-envelope"></i></div>
       </div>    
 	</div>
     <div class="row">
 		<br>
-		<input id="Accedi"  type="button" value="Accedi"/>
+		<input id="Accedi"  type="submit" value="Accedi"/>
 		<br><br>
 		<input id="Ripristino"  type="button" value="Username/Password dimenticati?"/>
 		<br><br>
