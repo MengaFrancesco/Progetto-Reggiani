@@ -26,6 +26,7 @@ if($result->num_rows > 0){
 	echo "<td>Nome</td>";
 	echo "<td>Referente</td>";
 	echo "<td>Nome Ufficio</td>";
+	echo "<td>Email</td>";
 	if($_SESSION["Admin"])
 		echo "<td>Elimina</td>";
 	echo "</tr></thead><tbody>";
@@ -39,6 +40,7 @@ if($result->num_rows > 0){
 		echo "<td>".$row["Nome"]."</td>";
 		echo "<td>".$row["Referente"]."</td>";
 		echo "<td>".$row["NomeUfficio"]."</td>";
+		echo "<td>".$row["email"]."</td>";
 		if($_SESSION["Admin"])
 			echo "<td><a href='eliminaAppuntamento.php?ID=".$row["ID"]."'>X</a></td>";
 		echo "</tr>";
@@ -84,6 +86,7 @@ echo "</tbody></table>";
 			<input type="text" name="nameNome" class="form-control" placeholder="Nome"/><br>
 			<input type="text" name="nameReferente" class="form-control" placeholder="Referente"/><br>
 			<input type="text" name="nameUfficio" class="form-control" placeholder="Nome ufficio"/><br>
+			<input type="email" name="nameEmail" class="form-control" placeholder="Email"/><br>
 			<input type="submit" value="Inserisci appuntamento" class="btn btn-lg btn-primary btn-block"/><br>
 		  </form>
     

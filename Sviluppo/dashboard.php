@@ -202,7 +202,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="QRreader.php"
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#"
                                 aria-expanded="false">
                                 <i class="fa fa-qrcode" aria-hidden="true"></i>
                                 <span class="hide-menu">Totem Uscita</span>
